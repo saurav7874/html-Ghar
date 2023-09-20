@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(background1.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+.navbar
+{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(yellow,orange,pink,purple,blue);
+    padding: 4px;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+.navbar ul li{
+    list-style: circle;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+.navbar ul li a{
+    text-decoration: solid;
+    color: rgb(102, 0, 0);
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+    
+}
+.navbar ul li::after{
+    content: '';
+    height: 5px;
+    width:0;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: brown;
+    font-family: cursive;
+}
+.content h1{
+    font-size: 150;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 80px;
+}
+.content p{
+    font-size: 30;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+    line-height: 20px;
+    margin: 20px auto;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(223, 79, 79);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+span{
+    background: rgb(223, 79, 79);
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+   z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+
+}
+button:hover{
+    border: none;
+    box-shadow:5px, 5px, 0px, #000 ;
+    scale: 1.2;
+}
+.logo:hover{
+    scale: 1.2;
+}
